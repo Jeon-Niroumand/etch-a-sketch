@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin: auto;
+}
+
+#grid{
+    margin: auto;
+    flex: 0 0 6.25%;
+}
