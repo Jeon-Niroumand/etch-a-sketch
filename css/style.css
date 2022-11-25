@@ -4,10 +4,25 @@ body{
 }
 
 h1{
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 #grid{
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
-    flex: 0 0 6.25%;
+    width: 432px;
 }
+
+div{
+    flex: 1 1 5.7%;
+    width: 25px;
+    height: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: slategray;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
