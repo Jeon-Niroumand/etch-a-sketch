@@ -1,22 +1,35 @@
+var customIDprefix = "box";
+var customIDcntr = 0;
 
-function makeSquare() // make a box
+function getNextID() {
+    return customIDprefix + customIDcntr++;
+}
+
+
+function makeSquare() // make a square
 {
 const box = document.createElement('div');
+box.setAttribute("id",getNextID());
+box.setAttribute("class", "box")
 grid.appendChild(box);
 }
 
-let rows = 256; // stacks boxes on top of one another
+let depth = 256; // spit out a bunch of squares
 let i = 0;
-while(i < rows){
+while(i < depth){
     makeSquare();
     i++;
 }
 
-let columns = rows
+//function markSquare()//highlight square on mouse over
+//{
+//    document.getElementById("box").style.color = "blue";
+//}
 
+//document.getElementById("box").onmouseover = markSquare();
 
+//document.getElementById("box").addEventListener("onmouseover",markSquare())
+//markSquare()
 
-
-
-
+console.log(getNextID())
 
