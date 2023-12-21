@@ -1,35 +1,27 @@
-var customIDprefix = "box";
+var customIDprefix = "box"; // make custom ids for each box
 var customIDcntr = 0;
-
-function getNextID() {
-    return customIDprefix + customIDcntr++;
+function getNextID() 
+{
+return customIDprefix + customIDcntr++;
 }
 
-
-function makeSquare() // make a square
+function makeBox() // make a box
 {
 const box = document.createElement('div');
 box.setAttribute("id",getNextID());
-box.setAttribute("class", "box")
+box.setAttribute("class", "box");
 grid.appendChild(box);
 }
 
-let depth = 256; // spit out a bunch of squares
+let depth = 256; // spit out a bunch of boxes
 let i = 0;
 while(i < depth){
-    makeSquare();
+    makeBox();
     i++;
 }
 
-//function markSquare()//highlight square on mouse over
-//{
-//    document.getElementById("box").style.color = "blue";
-//}
-
-//document.getElementById("box").onmouseover = markSquare();
-
-//document.getElementById("box").addEventListener("onmouseover",markSquare())
-//markSquare()
-
-console.log(getNextID())
-
+document.onmouseover = function(e) // mark the boxes now
+{
+   console.log(e.target.id);
+   document.getElementById(e.target.id).style.backgroundColor = "pink";
+}
