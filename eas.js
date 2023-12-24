@@ -13,7 +13,7 @@ box.setAttribute("class", "box");
 grid.appendChild(box);
 }
 
-let depth = 256; // spit out a bunch of boxes
+let depth = 16*16; // spit out a bunch of boxes
 let i = 0;
 while(i < depth){
     makeBox();
@@ -23,5 +23,5 @@ while(i < depth){
 document.onmouseover = function(e) // mark the boxes now
 {
    console.log(e.target.id);
-   document.getElementById(e.target.id).style.backgroundColor = "pink";
+   document.getElementById(e.target.id).style.backgroundColor = "purple";
 }

@@ -11,14 +11,16 @@ h1{
 #grid{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     margin: auto;
     width: 432px;
+    height: 432px;
+    border-style: solid;
+    border-color: black;
 }
 
 .box{
     flex: 1 1 5.7%;
-    width: 25px;
-    height: 25px;
     border-width: 1px;
     border-style: solid;
     border-color: slategray;
