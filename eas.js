@@ -23,5 +23,7 @@ while(i < depth){
 document.onmouseover = function(e) // mark the boxes now
 {
    console.log(e.target.id);
+   if ((e.target.id) != "grid") {
    document.getElementById(e.target.id).style.backgroundColor = "purple";
+   }
 }
